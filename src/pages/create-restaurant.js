@@ -11,10 +11,12 @@ import MapDisplay from "./createLocationComponents/MapDisplay";
 
 const initialState = { title: "", content: "" };
 function CreateRestaurant() {
+	const [createdRestaurant, setCreatedRestaurant] = useState(initialState);
 	const { title, content } = createdRestaurant;
 	const [image, setImage] = useState("");
 	const imageFileInput = useRef(null);
 	console.log("Hello");
+	const router = useRouter();
 	const [location, setLocation] = useState(null);
 
 	const handlePlaceSelected = (place) => {
