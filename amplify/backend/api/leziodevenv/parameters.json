@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "leziodevenv",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authleziodevenv6612628d",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

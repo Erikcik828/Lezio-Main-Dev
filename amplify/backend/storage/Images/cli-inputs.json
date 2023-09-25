@@ -1,0 +1,16 @@
+{
+  "resourceName": "Images",
+  "policyUUID": "4509c522",
+  "bucketName": "imagesoflezio",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

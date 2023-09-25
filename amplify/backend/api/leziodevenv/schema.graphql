@@ -1,0 +1,41 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+input AMPLIFY {
+  globalAuthRule: AuthRule = { allow: public }
+} # FOR TESTING ONLY!
+type Restaurant
+  @model
+  @auth(
+    rules: [
+      { allow: owner, ownerField: "username" }
+      { allow: public, operations: [read] }
+    ]
+  ) {
+  id: ID!
+  title: String
+  content: String
+  username: String
+    @index(name: "restaurantsByUsername", queryField: "restaurantsByUsername")
+
+  price: Int
+  generalImages: [String]
+  category: [String]
+  lat: Float
+  lng: Float
+  comments: [Comment] @hasMany(indexName: "byRestaurant", fields: ["id"]) #check out: https://docs.amplify.aws/cli/graphql/data-modeling/#has-many-relationship
+}
+type Comment
+  @model
+  @auth(
+    rules: [
+      { allow: owner, ownerField: "createdBy" }
+      { allow: public, operations: [read] }
+    ]
+  ) {
+  id: ID!
+  title: String
+  message: String
+  restaurant: Restaurant @belongsTo(fields: ["restaurantID"])
+  rating: Int
+  restaurantID: ID @index(name: "byRestaurant") #check out: https://docs.amplify.aws/cli/graphql/data-modeling/#has-many-relationship
+}

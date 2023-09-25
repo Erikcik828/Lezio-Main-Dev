@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-leziodevenv-dev-04059-authRole",
+      "UnauthRoleArn": "arn:aws:iam::819951115103:role/amplify-leziodevenv-dev-04059-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::819951115103:role/amplify-leziodevenv-dev-04059-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-leziodevenv-dev-04059-deployment",
+      "UnauthRoleName": "amplify-leziodevenv-dev-04059-unauthRole",
+      "StackName": "amplify-leziodevenv-dev-04059",
+      "StackId": "arn:aws:cloudformation:eu-north-1:819951115103:stack/amplify-leziodevenv-dev-04059/9a7d4fa0-37c6-11ee-a95b-0e0aa97efe26",
+      "AmplifyAppId": "d2az01683cqzur"
+    },
+    "categories": {
+      "api": {
+        "leziodevenv": {}
+      },
+      "auth": {
+        "leziodevenv6612628d": {}
+      },
+      "storage": {
+        "Images": {}
+      }
+    }
+  }
+}
